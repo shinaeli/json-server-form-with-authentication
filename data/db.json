@@ -1,0 +1,70 @@
+{
+  "loginDetails": [
+    {
+      "id": 1,
+      "email": "kokoma@gmail.com",
+      "username": "kokoma",
+      "password": "kokoma_419"
+    },
+    {
+      "id": 2,
+      "email": "bimbo@yahoo.com",
+      "username": "bimbolambo",
+      "password": "bimbo_lamba"
+    },
+    {
+      "id": 3,
+      "email": "pussyman@gmail.com",
+      "username": "pussy_magnet",
+      "password": "pussy001"
+    },
+    {
+      "id": 4,
+      "email": "tony_vibora@yahoo.com",
+      "username": "tony_payne",
+      "password": "daytona_vibez"
+    },
+    {
+      "id": 5,
+      "email": "shynamighty@gmail.com",
+      "username": "shynaMIGHTY",
+      "password": "shynamighty2665"
+    },
+    {
+      "email": "brucelee@gmail.com",
+      "username": "bruceeBEE",
+      "password": "bruceDaBrutal",
+      "id": 6
+    },
+    {
+      "email": "shawncarter@yahoo.com",
+      "username": "jay_Carter",
+      "password": "jay_z666",
+      "id": 7
+    },
+    {
+      "email": "idowest@gmail.com",
+      "username": "ido_mafia",
+      "password": "idomafia_419",
+      "id": 8
+    },
+    {
+      "email": "killerbean@gmail.com",
+      "username": "beankiller",
+      "password": "kill_bean808",
+      "id": 9
+    },
+    {
+      "email": "seyivibez@yahoo.com",
+      "username": "seyi_vibez",
+      "password": "vibezofseyi",
+      "id": 10
+    },
+    {
+      "email": "bellobose@gmail.com",
+      "username": "bello_bee",
+      "password": "boss_bb",
+      "id": 11
+    }
+  ]
+}
