@@ -200,7 +200,7 @@ input:focus {
   line-height: 1.2;
 }
 
-.form-button {
+.form-button, .back-home-btn {
   display: block;
   width: 100%;
   padding: 10px 0px;
@@ -211,6 +211,13 @@ input:focus {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.back-home-btn {
+  width: 45%;
+  display: block;
+  margin: 10px auto;
 }
 
 .footer-container {
@@ -252,6 +259,18 @@ input:focus {
 .copyright {
   text-align: center;
   margin: 30px auto;
+}
+
+.error-container {
+  width: 50%;
+  margin: 40px auto;
+  border: 2px solid #ff1493;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.error-container h1, .error-container h2, .error-container h3, .error-container p {
+  margin: 25px 0px;
 }
 
 /* mobile design */
@@ -334,5 +353,17 @@ input:focus {
     width: 80%;
     margin: 20px auto;
     border-radius: 8px;
+  }
+
+  .back-home-btn {
+    width: 60%;
+  }
+
+  .error-container {
+    width: 90%;
+  }
+  
+  .error-container h1, .error-container h2, .error-container h3, .error-container p {
+    text-align: center;
   }
 }

@@ -64,6 +64,11 @@ const SignUp = () => {
             position: toast.POSITION.TOP_CENTER,
             className: "toastify-message",
         })
+    } else if((details.email === "") && (details.username === "") && (details.password === "")) {
+        toast.error("Empty input fields are not allowed.", {
+            position: toast.POSITION.TOP_CENTER,
+            className: "toastify-message",
+        })
     }
   }
 
