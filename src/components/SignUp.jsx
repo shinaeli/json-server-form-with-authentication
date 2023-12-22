@@ -27,12 +27,12 @@ const SignUp = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    if((details.email && checkEmail(details.email)) && (details.username && checkUsername(details.username)) 
-    && (details.password && checkPassword(details.password)) && (isChecked)) {
+    if((details.email && checkEmail(details.email) && (15 <= details.email.length <= 25)) && (details.username && checkUsername(details.username) && (5 <= details.username.length <= 16)) 
+    && (details.password && checkPassword(details.password) && (8 <= details.password.length <= 15)) && (isChecked)) {
         const uid = new Date().getMilliseconds();
         setDetails({"id": uid, ...details, });
         let postObject = details;
-        fetch('http://localhost:8000/loginDetails', {
+        fetch('https://descriptive-lizard-comet.glitch.me/loginDetails', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -49,18 +49,18 @@ const SignUp = () => {
         setDetails({...details, "email": "", "username": "", "password": ""});
         setIsChecked(false);
         navigate("/sign-in");
-    } else if(!details.email || checkEmail(details.email) === false) {
-        toast.error("Email must end with a '.com' and must not empty.", {
+    } else if(!details.email || checkEmail(details.email) === false || (details.email.length < 15) || (details.email.length > 25)) {
+        toast.error("Email must contain 15-25 characters and must not empty.", {
             position: toast.POSITION.TOP_CENTER,
             className: "toastify-message",
         })
-    } else if(!details.username || checkUsername(details.username) === false) {
-        toast.error("Username must not empty and must not contain a space.", {
+    } else if(!details.username || checkUsername(details.username) === false || (details.username.length < 5) || (details.username.length > 16)) {
+        toast.error("Username must contain 5-16 characters and must not contain a space.", {
             position: toast.POSITION.TOP_CENTER,
             className: "toastify-message",
         })
-    } else if(!details.password || checkPassword(details.password) === false) {
-        toast.error("Password must not empty and must not contain a space.", {
+    } else if(!details.password || checkPassword(details.password) === false|| (details.password.length < 8) || (details.password.length > 15)) {
+        toast.error("Password must contain 8-15 characters and must not contain a space.", {
             position: toast.POSITION.TOP_CENTER,
             className: "toastify-message",
         })

@@ -6,7 +6,7 @@ import { useNavigate, Link } from 'react-router-dom';
 
 const SignIn = () => {
   const [login, setLogin] = useState({});
-  const { loggedData } = useFetch('http://localhost:8000/loginDetails', {});
+  const { loggedData } = useFetch('https://descriptive-lizard-comet.glitch.me/loginDetails', {});
   const navigate = useNavigate();
 
   function checkDetails(items) {
