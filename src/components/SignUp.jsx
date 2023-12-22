@@ -50,21 +50,25 @@ const SignUp = () => {
         setIsChecked(false);
         navigate("/sign-in");
     } else if(!details.email || checkEmail(details.email) === false || (details.email.length < 15) || (details.email.length > 25)) {
+        setIsChecked(false);
         toast.error("Email must contain 15-25 characters and must not empty.", {
             position: toast.POSITION.TOP_CENTER,
             className: "toastify-message",
         })
     } else if(!details.username || checkUsername(details.username) === false || (details.username.length < 5) || (details.username.length > 16)) {
+        setIsChecked(false);
         toast.error("Username must contain 5-16 characters and must not contain a space.", {
             position: toast.POSITION.TOP_CENTER,
             className: "toastify-message",
         })
-    } else if(!details.password || checkPassword(details.password) === false|| (details.password.length < 8) || (details.password.length > 15)) {
+    } else if(!details.password || checkPassword(details.password) === false || (details.password.length < 8) || (details.password.length > 15)) {
+        setIsChecked(false);
         toast.error("Password must contain 8-15 characters and must not contain a space.", {
             position: toast.POSITION.TOP_CENTER,
             className: "toastify-message",
         })
     } else if((details.email === "") && (details.username === "") && (details.password === "")) {
+        setIsChecked(false);
         toast.error("Empty input fields are not allowed.", {
             position: toast.POSITION.TOP_CENTER,
             className: "toastify-message",
